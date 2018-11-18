@@ -24,10 +24,11 @@ Route::get('/', function () {
      $post->content = 'test content';
      $post->save();*/
 
-     $post = \App\Post::all();
+     /*$post = \App\Post::all();
+     dd($post);*/
+
+     $post = \App\Post::find(1);
      dd($post);
-
-
 });
 
 
