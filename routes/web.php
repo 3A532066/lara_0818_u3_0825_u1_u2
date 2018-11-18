@@ -33,10 +33,10 @@ Route::get('/', function () {
      /*$post = \App\Post::where('id','c',10)->orderBy('id','DESC')->get();
      dd($post);*/
    
-     /*$post = \App\Post::find(1);
+     /*$post = \App\Post::find(4);
      $post->update([
-        'title' => 'updated title',
-        'content' => 'updated content',
+        'title' => 'test title',
+        'content' => 'test content',
      ]);*/
 
      /*$post = \App\Post::find(1);
@@ -56,10 +56,16 @@ Route::get('/', function () {
      $featuredPosts = \App\Post::where('is_feature',1)->get();
      dd($featuredPosts);*/
 
-    $fourthPost = \App\Post::find(4);
+    /*$fourthPost = \App\Post::find(4);
     dd($fourthPost);
     $lastPost = \App\Post::orderBy('id','DESC')->first();
-    dd($lastPost);
+    dd($lastPost);*/
+
+    $post = \App\Post::find(4);
+    foreach($post->comments as $comment)
+    {
+        echo $comment->content,'<br>';
+    }
 
 });
 
