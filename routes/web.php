@@ -18,7 +18,7 @@ Route::get('/', function () {
         'title' => 'test title',
         'content' => 'test content',
      ]);*/
-
+    
      /*$post = new \App\Post();
      $post->title = 'test title';
      $post->content = 'test content';
@@ -30,9 +30,15 @@ Route::get('/', function () {
      /*$post = \App\Post::find(1);
      dd($post);*/
 
-     $post = \App\Post::where('id','c',10)->orderBy('id','DESC')->get();
-     dd($post);
-     
+     /*$post = \App\Post::where('id','c',10)->orderBy('id','DESC')->get();
+     dd($post);*/
+   
+     $post = \App\Post::find(1);
+     $post->update([
+        'title' => 'updated title',
+        'content' => 'updated content',
+     ]);
+
 });
 
 
