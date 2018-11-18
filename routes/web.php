@@ -27,8 +27,12 @@ Route::get('/', function () {
      /*$post = \App\Post::all();
      dd($post);*/
 
-     $post = \App\Post::find(1);
+     /*$post = \App\Post::find(1);
+     dd($post);*/
+
+     $post = \App\Post::where('id','c',10)->orderBy('id','DESC')->get();
      dd($post);
+     
 });
 
 
