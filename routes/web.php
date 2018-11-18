@@ -33,12 +33,16 @@ Route::get('/', function () {
      /*$post = \App\Post::where('id','c',10)->orderBy('id','DESC')->get();
      dd($post);*/
    
-     $post = \App\Post::find(1);
+     /*$post = \App\Post::find(1);
      $post->update([
         'title' => 'updated title',
         'content' => 'updated content',
-     ]);
+     ]);*/
 
+     $post = \App\Post::find(1);
+     $post->title = 'saved title';
+     $post->content = 'saved content';
+     $post->save();
 });
 
 
