@@ -39,9 +39,9 @@ Route::get('/', function () {
         'content' => 'test content',
      ]);*/
 
-     /*$post = \App\Post::find(1);
-     $post->title = 'saved title';
-     $post->content = 'saved content';
+     /*$post = \App\Post::find(5);
+     $post->title = 'saved title 5';
+     $post->content = 'saved content 5';
      $post->save();*/
 
      /*$post = \App\Post::find(1);
@@ -64,7 +64,7 @@ Route::get('/', function () {
     $post = \App\Post::find(4);
     foreach($post->comments as $comment)
     {
-        echo $comment->content,'<br>';
+        echo $comment->title.'<br>';
     }
 
 });
